@@ -1,12 +1,14 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
 void MinimumMaksimum(int tab[], int length)
 {
-	int max = 0;
-	int min = 0;
-	for(int i = 0; i < length; i++)
+	int max = tab[0]; 
+	int min = tab[0];
+	for(int i = 1; i < length; i++)
 	{
 		if(tab[i] < min)
 		{
@@ -16,16 +18,49 @@ void MinimumMaksimum(int tab[], int length)
 		{
 			max = tab[i];
 		}
-		cout << i << endl;
 	}
 	cout << "Wartosc maksymalna: " << max << endl;
 	cout << "Wartosc minimalna: " << min << endl;
 }
 
+void BubbleSort(int tab[], int length)
+{
+	int temporary = 0;
+	for(int j = 0; j < length - 1; j++)
+	{
+		for(int i = 0; i < length -1; i++)
+		{
+			
+			if(tab[i] > tab[i+1])
+			{
+				temporary = tab[i+1];
+				tab[i+1] = tab[i];
+				tab[i] = temporary;
+			}
+		}
+	}
+}
 int main()
 {
-	int tab[12] = {-1,0,1,2,3,4,5,6,7,8,9,10};
-	int dlugoscTablicy = sizeof(tab)/sizeof(tab[0]);
+	int dlugoscTablicy = 20;
+	int tab[dlugoscTablicy];
+	srand(time(0));
+	for(int i = 0; i < dlugoscTablicy; i++)
+	{
+		tab[i] = rand()%100;
+	}
+	for (int i = 0; i < dlugoscTablicy; i++)
+	{
+		cout << tab[i] << ", ";
+	}
+	cout << endl;
+	BubbleSort(tab,dlugoscTablicy);
+	
+	for (int i = 0; i < dlugoscTablicy; i++)
+	{
+		cout << tab[i] << ", ";
+	}
+	cout << endl;
 	MinimumMaksimum(tab, dlugoscTablicy);
 	return 0;
 }
