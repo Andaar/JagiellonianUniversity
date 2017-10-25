@@ -2,3 +2,6 @@ git status
 git init
 git clone 'https://'
 try github
+git add .
+git commit -m "tresc"
+git push
