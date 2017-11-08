@@ -10,8 +10,6 @@
     + wyszukiwanie największej liczby w zakresie [b,e);
     + odwracanie kolejności elementów zakresu [b,e);
     + scalanie dwóch posortowanych zakresów w trzeci (również posortowany).
-
-    @author:  Igor Kozub
 */
 
 #include <iostream>
