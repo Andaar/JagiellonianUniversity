@@ -1,0 +1,61 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+
+void Zamiana(int tab[], int dlugoscTablicy,
+	int pierwszyElementDoZamiany)
+	{
+		int temp = 0;
+		for(int i = pierwszyElementDoZamiany; 
+			i < dlugoscTablicy-1; i++)
+			{
+				if(tab[i] > tab[i+1])
+				{
+					temp = tab[i];
+					tab[i] = tab[i+1];
+					tab[i+1]=temp;
+				}
+				else
+				{
+					break;
+				}
+			}
+			cout << endl;
+	for (int i = 0; i < dlugoscTablicy; i++)
+	{
+		cout << tab[i] << ", ";
+	}
+	cout << endl;
+	}
+					
+int main()
+{
+	int N = 5;
+	int tab[N] = {7,3,8,5,2};
+	//int N = 20;
+	/*int tab[N];
+	srand(time(NULL));
+	for(int i = 0; i < N; i++)
+	{
+		tab[i] = rand()%100;
+	}*/
+	for (int i = 0; i < N; i++)
+	{
+		cout << tab[i] << ", ";
+	}
+	cout << endl;
+	for(int i = N - 1; i > 0; i--)
+	{
+		if(tab[i] < tab[i-1])
+		{
+			Zamiana(tab,N,i-1);
+		}
+	}
+	for (int i = 0; i < N; i++)
+	{
+		cout << tab[i] << ", ";
+	}
+	return 0;
+	
+}
