@@ -2,4 +2,6 @@ gcc -fdump-tree-all main.c
 gcc -c main.c
 gcc main.o -o main.c/main
 gcc main.c -pedantic -Wall -W -o1 -o2 -o3 -std=c11 -c -save-temps
+-E - sprawdzanie makr 
+-S
 .i .s .o - znać rozszerzenia plików
