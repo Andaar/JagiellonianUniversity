@@ -1,0 +1,1 @@
+gcc -fdump-tree-all ObliczanieSinusa.c
