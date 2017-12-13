@@ -1,0 +1,1 @@
+cat index.html | sed 's/<[^>]*>//g' | awk '{$1=$1;print}' | sed '/^[[:space:]]*$/d'
