@@ -5,3 +5,8 @@ try github
 git add .
 git commit -m "tresc"
 git push
+
+
+hello() { echo "Hello world $USER"; }
+declare -f hello
+declare -f
