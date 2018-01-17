@@ -12,3 +12,5 @@ declare -f [function]
 declare -f
 unset [function]
 wczoraj() { date --date='1 day ago'; }
+source [filename] //definicja zmiennych globalnych ze skryptu
+pwd [filename]
