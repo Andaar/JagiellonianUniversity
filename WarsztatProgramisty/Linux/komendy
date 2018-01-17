@@ -8,5 +8,6 @@ git push
 
 
 hello() { echo "Hello world $USER"; }
-declare -f hello
+declare -f [function]
 declare -f
+unset [function]
