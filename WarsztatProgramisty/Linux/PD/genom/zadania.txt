@@ -48,7 +48,7 @@ chrom	strand	txStart	txEnd	cdsStart	cdsEnd	exonCount	exonStarts	exonEnds	protein
 	awk '{if($4=="+") {print > "genom_plus.txt"} else if($4=="-") {print > "genom_neg.txt"}}' genom.txt
 
 12- Posortuj wszystkie dane w genom_plus.txt, najpierw przez chromosom (rosnąco), a następnie przez pierwszą współrzędną (malejąco).
-	sort -k3 -V genom_plus.txt | sort 5 -n -r > genom_plus_sorted.txt
+	sort -k3 -V genom_plus.txt | sort -k5 -n -r > genom_plus_sorted.txt
 
 13- Podziel równomiernie wszystkie dane na 4 pliki o nazwach "Part_1.txt", "Part_2.txt" itd. Użyj komendy split.
 	awk '{count ++} END {print count/4+0.5}' genom.txt	
